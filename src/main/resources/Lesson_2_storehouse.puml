@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Shop -> Storage: Запрос наличие товара на складе
+Storage --> Shop: Ответ наличие товара на складе
+
+@enduml

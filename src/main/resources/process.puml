@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+User-> (Просмотр списка \nтоваров)
+User --> (добавление в корзину)
+User --> (авторизация)
+
+note right of User : Процесс:\nВзаимодействие пользователя\n с порталом.
+@enduml

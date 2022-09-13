@@ -1,0 +1,11 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Shop -> Delivery: Запрос наличие свободной машины
+Delivery --> Shop: Ответ  наличие свободной машины
+
+Shop -> Delivery: Запрос срок доставки
+Shop <-- Delivery: Ответ срок доставки
+@enduml

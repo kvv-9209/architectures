@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+User -> Shop: Запрос на авторизацию
+Shop --> User: Ответ на запрос авторизации
+
+User -> Shop: Запрос на просмотр списка товаров
+User <-- Shop: Ответ с отправкой списка товаров
+
+User -> Shop: Запрос на добавление товаров в корзину
+User <-- Shop: Ответ об успешном добавлении товаров в корзину
+@enduml
