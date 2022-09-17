@@ -1,17 +1,16 @@
 package ru.gb.gbshopmay.entity;
 
-import lombok.*;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import ru.gb.gbshopmay.entity.common.BaseEntity;
 import ru.gb.gbshopmay.entity.common.InfoEntity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Set;
 
 @Getter
@@ -20,6 +19,9 @@ import java.util.Set;
 @Entity
 @Table(name = "CATEGORY")
 @EntityListeners(AuditingEntityListener.class)
+@Cacheable
+@CachePut(value="CATEGORY")
+@CacheEvict(value="CATEGORY")
 public class Category extends InfoEntity {
 
     @Column(name = "title")
