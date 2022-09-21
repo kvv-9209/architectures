@@ -21,6 +21,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table (name = "product")
+@EntityListeners(AuditingEntityListener.class)
 public class Product extends InfoEntity {
 
     @Column(name = "title")

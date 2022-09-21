@@ -17,6 +17,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "MANUFACTURER")
+
 @EntityListeners(AuditingEntityListener.class)
 public class Manufacturer extends InfoEntity {
 
